@@ -41,10 +41,8 @@ function Steps() {
 					</p>
 
 					<div className='buttons'>
-						<Button bgColor='#7950f2' textColor='#fff' onClick={handlePrevious} text='Previous' />
-						<button style={{ backgroundColor: '#7950f2', color: '#fff' }} onClick={handleNext}>
-							Next
-						</button>
+						<Button bgColor='#7950f2' textColor='#fff' onClick={handlePrevious} text='Previous' emoji='👣' />
+						<Button bgColor='#7950f2' textColor='#fff' onClick={handleNext} text='Next' emoji='👣' />
 					</div>
 				</div>
 			)}
@@ -52,10 +50,10 @@ function Steps() {
 	)
 }
 
-function Button({ textColor, bgColor, onClick, text }) {
+function Button({ textColor, bgColor, onClick, text, emoji }) {
 	return (
 		<button style={{ backgroundColor: bgColor, color: textColor }} onClick={onClick}>
-			{text}
+			<span>{emoji}</span> {text}
 		</button>
 	)
 }
